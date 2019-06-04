@@ -2,7 +2,7 @@
 
 set -ev
 
-VERSION=0.2
+VERSION=0.3
 
 git tag $VERSION
 git push --tags origin master

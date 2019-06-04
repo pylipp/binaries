@@ -18,4 +18,6 @@ patch < st-solarized-both-20170626-b331da5.diff
 patch < st-clipboard-20170925-b1338e9.diff
 
 make clean all
-tar -czf st.tar.gz st
+
+# Bundle executable, terminfo file, and man page
+tar -czf st.tar.gz st st.info st.1

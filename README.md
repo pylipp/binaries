@@ -24,3 +24,10 @@ Create secure GitHub OAuth token:
 ## `st`
 
 [Simple terminal](https://st.suckless.org/), customized (solarized color scheme, clipboard interaction).
+
+### Installation
+
+1. Download package from [releases page](https://github.com/pylipp/binaries/releases) and extract.
+1. Move `st` to somewhere in your `$PATH`.
+1. Run `tic -sx st.info`. More info in the [st](https://git.suckless.org/st/file/README.html) repo.
+1. Move `st.1` to somewhere in your `manpath`.
