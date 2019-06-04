@@ -1,6 +1,23 @@
 [![Build Status](https://travis-ci.org/pylipp/binaries.svg?branch=master)](https://travis-ci.org/pylipp/binaries)
 
-Provide useful binaries - built in Travis CI and deployed onto GitHub
+Provide useful, customized programs - built in Travis CI and deployed onto GitHub (target platform: Linux on x64 architecture)
+
+# Programs
+
+## `st`
+
+[Simple terminal](https://st.suckless.org/), customized (solarized color scheme, clipboard interaction).
+
+### Installation
+
+1. Download package from [releases page](https://github.com/pylipp/binaries/releases) and extract.
+1. Move `st` to somewhere in your `$PATH`.
+1. Run `tic -sx st.info`. More info in the [st](https://git.suckless.org/st/file/README.html) repo.
+1. Move `st.1` to somewhere in your `manpath`.
+
+# Deployment
+
+Run `./deploy.sh`. The version number is automatically incremented and used to tag the latest commit.
 
 # Prerequisites
 
@@ -18,20 +35,3 @@ More info [here](https://github.com/travis-ci/travis.rb#installation). Run (test
 Create secure GitHub OAuth token:
 
     travis setup releases
-
-# Binaries
-
-## `st`
-
-[Simple terminal](https://st.suckless.org/), customized (solarized color scheme, clipboard interaction).
-
-### Installation
-
-1. Download package from [releases page](https://github.com/pylipp/binaries/releases) and extract.
-1. Move `st` to somewhere in your `$PATH`.
-1. Run `tic -sx st.info`. More info in the [st](https://git.suckless.org/st/file/README.html) repo.
-1. Move `st.1` to somewhere in your `manpath`.
-
-# Deployment
-
-Run `./deploy.sh`.
