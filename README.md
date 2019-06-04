@@ -31,3 +31,7 @@ Create secure GitHub OAuth token:
 1. Move `st` to somewhere in your `$PATH`.
 1. Run `tic -sx st.info`. More info in the [st](https://git.suckless.org/st/file/README.html) repo.
 1. Move `st.1` to somewhere in your `manpath`.
+
+# Deployment
+
+Run `./deploy.sh`.
