@@ -15,6 +15,17 @@ Provide useful, customized programs - built in Travis CI and deployed onto GitHu
 1. Run `tic -sx st.info`. More info in the [st](https://git.suckless.org/st/file/README.html) repo.
 1. Move `st.1` to somewhere in your `manpath`.
 
+## `uctags`
+
+[Universal ctags](https://github.com/universal-ctags/ctags).
+
+### Installation
+
+1. Remove the exuberant-ctags installation from your system before installing universal-ctags.
+1. Download package from [releases page](https://github.com/pylipp/binaries/releases) and extract.
+1. Move `ctags` to somewhere in your `$PATH`.
+1. Move `ctags.1` to somewhere in your `manpath`.
+
 # Deployment
 
 Run `./deploy.sh`. The version number is automatically incremented and used to tag the latest commit.
