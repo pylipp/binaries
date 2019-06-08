@@ -13,4 +13,4 @@ git add "$VERSION_FILE"
 git commit --amend --no-edit
 
 git tag 0.$VERSION
-git push --tags origin master
+git push --tags "$@" origin master
