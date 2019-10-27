@@ -26,6 +26,17 @@ Provide useful, customized programs - built in Travis CI and deployed onto GitHu
 1. Move `ctags` to somewhere in your `$PATH`.
 1. Move `ctags.1` to somewhere in your `manpath`.
 
+## `tig`
+
+[tig](https://github.com/jonas/tig)
+
+### Installation
+
+1. Download package from [releases page](https://github.com/pylipp/binaries/releases) and extract.
+1. Move `src/tig` to somewhere in your `$PATH`.
+1. Move the man page files to somewhere in your `manpath`.
+1. Move `contrib/tig-completion.*` to somewhere on your `$fpath` (when using zsh), or source it from `~/.bashrc` (when using bash). See the files for detailed instructions.
+
 # Deployment
 
 Run `./deploy.sh`. The version number is automatically incremented and used to tag the latest commit.
