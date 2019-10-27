@@ -2,9 +2,11 @@
 
 set -ev
 
-wget https://github.com/jonas/tig/releases/download/tig-2.4.1/tig-2.4.1.tar.gz
-tar xvf tig-2.4.1.tar.gz
-mv tig-2.4.1 tig
+version=2.4.1
+
+wget https://github.com/jonas/tig/releases/download/tig-$version/tig-$version.tar.gz
+tar xvf tig-$version.tar.gz
+mv tig-$version tig
 cd tig
 
 ./autogen.sh
