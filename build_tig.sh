@@ -4,7 +4,8 @@ set -ev
 
 wget https://github.com/jonas/tig/releases/download/tig-2.4.1/tig-2.4.1.tar.gz
 tar xvf tig-2.4.1.tar.gz
-cd tig-2.4.1
+mv tig-2.4.1 tig
+cd tig
 
 ./autogen.sh
 ./configure
