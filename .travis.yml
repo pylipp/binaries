@@ -10,6 +10,7 @@ addons:
     - python3-docutils
 
 script:
+- ./build_tig.sh
 - ./build_st.sh
 - ./build_uctags.sh
 
@@ -20,6 +21,7 @@ deploy:
   file:
     - st/st.tar.gz
     - ctags/uctags.tar.gz
+    - tig/tig.tar.gz
   skip_cleanup: true
   on:
     # repo: pylipp/binaries
