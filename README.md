@@ -37,6 +37,16 @@ Provide useful, customized programs - built in Travis CI and deployed onto GitHu
 1. Move the man page files to somewhere in your `manpath`.
 1. Move `contrib/tig-completion.*` to somewhere on your `$fpath` (when using zsh), or source it from `~/.bashrc` (when using bash). See the files for detailed instructions.
 
+## `sxiv`
+
+[sxiv](https://github.com/muennich/sxiv)
+
+### Installation
+1. Download package from [releases page](https://github.com/pylipp/binaries/releases) and extract.
+1. Move `sxiv` to somewhere in your `$PATH`.
+1. Move the man page files to somewhere in your `manpath`.
+1. Move the `exec/` directory to `~/.local/share/sxiv`.
+
 # Deployment
 
 Run `./deploy.sh`. The version number is automatically incremented and used to tag the latest commit.
