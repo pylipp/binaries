@@ -1,0 +1,77 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+  workflow_dispatch:
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: install dependencies
+      run: |
+        sudo apt-get install libfontconfig-dev libx11-dev libxft-dev python3-docutils libimlib2-dev libexif-dev fontconfig libfreetype6-dev
+
+    - name: build
+      run: |
+        ./build_sxiv.sh
+        ./build_tig.sh
+        ./build_st.sh
+        ./build_uctags.sh
+
+    - name: create release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+
+    - name: upload sxiv assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./sxiv/sxiv.tar.gz
+        asset_name: sxiv.tar.gz
+        asset_content_type: application/gzip
+
+    - name: upload st assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./st/st.tar.gz
+        asset_name: st.tar.gz
+        asset_content_type: application/gzip
+
+    - name: upload uctags assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./ctags/uctags.tar.gz
+        asset_name: uctags.tar.gz
+        asset_content_type: application/gzip
+
+    - name: upload tig assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./tig/tig.tar.gz
+        asset_name: tig.tar.gz
+        asset_content_type: application/gzip
