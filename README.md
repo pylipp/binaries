@@ -47,6 +47,15 @@ Provide useful, customized programs - built in GitHub Actions and deployed onto 
 1. Move the man page files to somewhere in your `manpath`.
 1. Move the `exec/` directory to `~/.local/share/sxiv`.
 
+## `entr`
+
+[entr](https://github.com/eradman/entr/)
+
+## Installation
+1. Download package from [releases page](https://github.com/pylipp/binaries/releases) and extract.
+1. Move `entr` to somewhere in your `$PATH`.
+1. Move the man page files to somewhere in your `manpath`.
+
 # Deployment
 
 Run `./deploy.sh`. The version number is automatically incremented and used to tag the latest commit.

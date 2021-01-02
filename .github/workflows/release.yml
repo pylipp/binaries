@@ -26,6 +26,7 @@ jobs:
         ./build_tig.sh
         ./build_st.sh
         ./build_uctags.sh
+        ./build_entr.sh
 
     - name: create release
       id: create_release
@@ -74,4 +75,14 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./tig/tig.tar.gz
         asset_name: tig.tar.gz
+        asset_content_type: application/gzip
+
+    - name: upload entr assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./entr/entr.tar.gz
+        asset_name: entr.tar.gz
         asset_content_type: application/gzip

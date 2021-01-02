@@ -27,3 +27,4 @@ jobs:
         ./build_tig.sh
         ./build_st.sh
         ./build_uctags.sh
+        ./build_entr.sh
