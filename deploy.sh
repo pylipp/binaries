@@ -12,5 +12,5 @@ echo $VERSION > "$VERSION_FILE"
 git add "$VERSION_FILE"
 git commit --amend --no-edit
 
-git tag 0.$VERSION
+git tag v0.$VERSION
 git push --tags "$@" origin master
